@@ -1,4 +1,3 @@
-import pytest
 from src.demo import add, subtract, multiply, divide
 
 x = 1

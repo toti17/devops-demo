@@ -5,14 +5,13 @@ pipeline {
             steps {
                 sh '''
                     python --version
-                    pip3 install pytest
                 '''
             }
         }
         stage('test') {
             steps {
                 sh '''
-                    python3 -m pytest test/demo_test.py
+                    python test/demo_test.py
                 '''
             }
         }
