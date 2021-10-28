@@ -1,4 +1,4 @@
-from src.demo import add, subtract, multiply, divide
+from demo import add, subtract, multiply, divide
 
 x = 1
 y = 1
@@ -18,3 +18,8 @@ def test_multiply_should_return_correct_product():
 def test_divide_should_return_correct_quotient():
     quotient = x / y
     assert divide(x, y) == quotient
+
+test_add_should_return_correct_sum()
+test_subtract_should_return_correct_difference()
+test_multiply_should_return_correct_product()
+test_divide_should_return_correct_quotient()
