@@ -8,7 +8,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'python -u demo.py'   
+                sh 'py.test'   
             }
         }
     }
