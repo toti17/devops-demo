@@ -4,4 +4,6 @@ lib/
 lib64
 share/
 pyvenv.cfg
-**/__pycache__/
+__init__.py
+__pycache__/
+*.py[cod]

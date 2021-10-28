@@ -3,12 +3,18 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh '''
+                    python --version
+                    pip3 --install --upgrade pip
+                    pip3 install pytest
+                '''
             }
         }
         stage('test') {
             steps {
-                sh 'py.test'   
+                sh '''
+                    python3 -m pytest test/demo_test.py
+                '''
             }
         }
     }
