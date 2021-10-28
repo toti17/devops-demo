@@ -11,10 +11,5 @@ pipeline {
                 sh 'python demo.py'   
             }
         }
-        stage('deploy') {
-            steps {
-
-            }
-        }
     }
 }
