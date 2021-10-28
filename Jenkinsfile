@@ -21,9 +21,11 @@ pipeline {
                     echo 'building docker file'
                     
                 '''
-                def customImage = docker.build("my-image:${env.BUILD_ID}")
-                customImage.inside {
-                    sh 'python demo.py'
+                node {
+                    def customImage = docker.build("my-image:${env.BUILD_ID}")
+                    customImage.inside {
+                        sh 'python demo.py'
+                    }
                 }
             }
         }
