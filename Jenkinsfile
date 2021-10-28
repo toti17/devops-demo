@@ -15,5 +15,18 @@ pipeline {
                 '''
             }
         }
+        stage('deploy') {
+            steps {
+                sh '''
+                    echo 'creating docker file'
+                    
+                '''
+                agent {
+                    docker {
+                        docker build -t demo .
+                    }
+                }
+            }
+        }
     }
 }
