@@ -18,13 +18,12 @@ pipeline {
         stage('deploy') {
             steps {
                 sh '''
-                    echo 'creating docker file'
+                    echo 'building docker file'
                     
                 '''
-                agent {
-                    docker {
-                        docker build -t demo .
-                    }
+                def customImage = docker.build("my-image:${env.BUILD_ID}")
+                customImage.inside {
+                    sh 'python demo.py'
                 }
             }
         }
