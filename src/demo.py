@@ -17,6 +17,9 @@ def divide(x, y):
     print(f"dividing {x} an {y}")
     return x / y
 
+def greet():
+    print("Hello world")
+
 add(x,y)
 subtract(x,y)
 multiply(x,y)
