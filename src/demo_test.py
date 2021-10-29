@@ -5,7 +5,7 @@ y = 1
 
 def test_add_should_return_correct_sum():
     sum = x + y
-    assert add(x, y) == sum
+    assert add(x, y) == 3
 
 def test_subtract_should_return_correct_difference():
     diff = x - y
