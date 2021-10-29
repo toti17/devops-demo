@@ -15,5 +15,12 @@ pipeline {
                 '''
             }
         }
+        stage('deploy') {
+            steps {
+                sh '''
+                    docker --version
+                '''
+            }
+        }
     }
 }
