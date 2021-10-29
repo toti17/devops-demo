@@ -1,7 +1,6 @@
 pipeline {
-    agent none
+    agent any
     stages {
-            agent { docker { image 'python:3.8.10'} }
         stage('build') {
             steps {
                 sh '''
@@ -10,18 +9,9 @@ pipeline {
             }
         }
         stage('test') {
-            agent { docker { image 'python:3.8.10'} }
             steps {
                 sh '''
                     python3 src/demo_test.py
-                '''
-            }
-        }
-        stage('deploy') {
-            agent { dockerfile true }
-            steps {
-                sh '''
-                    echo "building docker image"
                 '''
             }
         }
