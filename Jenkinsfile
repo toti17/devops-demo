@@ -16,9 +16,9 @@ pipeline {
             }
         }
         stage('deploy') {
-            agent any
             steps {
                 sh '''
+                    docker --version
                     docker build -t devops-demo .
                 '''
             }
