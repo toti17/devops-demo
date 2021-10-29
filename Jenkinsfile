@@ -18,8 +18,8 @@ pipeline {
         stage('deploy') {
             steps {
                 sh '''
-                    docker --version
-                    docker build -t devops-demo .
+                    /usr/bin/docker --version
+                    /usr/bin/docker build -t devops-demo .
                 '''
             }
         }
