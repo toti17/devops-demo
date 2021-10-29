@@ -19,6 +19,11 @@ pipeline {
         }
         stage('deploy') {
             agent { dockerfile true }
+            steps {
+                sh '''
+                    echo "building docker image"
+                '''
+            }
         }
     }
 }
