@@ -19,6 +19,7 @@ pipeline {
             steps {
                 sh '''
                     docker --version
+                    docker build -t devops-demo .
                 '''
             }
         }
