@@ -18,15 +18,8 @@ pipeline {
         stage('deploy') {
             steps {
                 sh '''
-                    echo 'building docker file'
-                    
+                    docker build -t devops-demo .
                 '''
-                node {
-                    def customImage = docker.build("my-image:${env.BUILD_ID}")
-                    customImage.inside {
-                        sh 'python demo.py'
-                    }
-                }
             }
         }
     }
